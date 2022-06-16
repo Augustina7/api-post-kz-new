@@ -157,7 +157,6 @@ ul li {
 }
 
 .main h4 {
-    font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 2;
@@ -478,7 +477,6 @@ ul li {
 
 .footer ul li a {
     font-family: 'Roboto';
-    font-style: normal;
     font-size: 1rem;
     line-height: 1.5;
     color: #3963CD;
