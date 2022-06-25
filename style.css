@@ -17,6 +17,12 @@ ul li {
 .header {
     background-color: #0B2362;
     padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+}
+
+.header_new_color {
+    background-color: #fff;
 }
 
 .header-inner {
@@ -135,11 +141,7 @@ ul li {
 
 .main-content {
     padding: 9.125rem 0 13rem 0;
-    position: absolute;
-    left: 0;
-    top: 4rem;
-    right: 0;
-    bottom: 0;
+    margin: 4rem 0 0 122px;
 }
 
 .main img {
@@ -222,7 +224,7 @@ ul li {
 
 /* --------------- SECTION-FUNCTIONS ---------------*/
 .section-functions-content {
-    padding: 4rem 0 7rem 0;
+    padding: 4rem 0;
 }
 
 .section-functions-content h2 {
@@ -263,7 +265,8 @@ ul li {
 }
 
 .section-functions ul li img {
-    padding-right: 0.75rem;
+    display: block;
+    margin-right: 0.75rem;
 }
 
 /* --------------- SECTION-CONNECT ---------------*/
@@ -272,7 +275,14 @@ ul li {
 }
 
 .section-connect-content {
-    padding: 4.375rem 0 5rem 0;
+    padding: 3rem 0 5rem 0;
+}
+
+.section-connect-content a {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: #fff;
 }
 
 .section-connect h2 {
@@ -281,6 +291,7 @@ ul li {
     font-size: 3rem;
     line-height: 1;
     color: #fff;
+    margin-top: 2rem;
 }
 
 .section-connect ul li h3 {
@@ -291,15 +302,41 @@ ul li {
     color: #fff;
 }
 
+.section-connect ul li::after {
+    content: ">";
+    color: #3963CD;
+    opacity: 0.5;
+    font-family: 'Montserrat';
+    font-size: 4rem;
+}
+
+.section-connect ul li:nth-last-child(1)::after {
+    content: "";
+}
+
 .section-connect ul li img {
     padding-bottom: 2.375rem;
+}
+
+.section-connect ul li span {
+    color: #204092;
+    background-color: #3963CD;
+    font-size: 4rem;
+    font-family: 'Montserrat';
+    line-height: 1;
+    text-align: center;
+    padding: 30px 50px;
+    border: 2px solid #3963CD;
+    border-radius: 79px;
+    margin-bottom: 2.5rem;
+    display: inline-block;
 }
 
 .section-connect ul li h3 {
     padding-bottom: 0.5rem;
 }
 
-.section-connect ul {
+.section-connect ul, .section-connect ul li {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -317,7 +354,7 @@ ul li {
 .connect-content-title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 5.375rem;
 }
 
@@ -327,14 +364,18 @@ ul li {
 }
 
 .connect-content-button-size {
-    padding: 0.5rem 2rem;
+    padding: 0.75rem 2.25rem;
     margin: 0 0.5rem;
+}
+
+.connect-content-button-size span {
+    font-size: 16px;
 }
 
 /* --------------- SECTION-SERVICE ---------------*/
 .section-service {
     background-color: #F4F7FE;
-    padding: 4rem 0 8.375rem 0;
+    padding: 5rem 0;
 }
 
 .section-service h2 {
@@ -347,13 +388,13 @@ ul li {
 }
 
 .service-content-button-size {
-    padding: 1.35rem 6rem;
+    padding: 1rem 4rem;
     margin: 0 auto;
     display: block;
 }
 
 .service-content-button-size span {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1;
 }
 
@@ -377,18 +418,27 @@ ul li {
 }
 
 .service-content a {
-    background-image: url('./img/Vector\ 2.2.svg');
-    background-repeat: no-repeat;
-    background-position: left 90% top 20%;
     font-size: 14px;
     line-height: 3.5;
     color: #949494;
-    padding-right: 1.75rem;
-    margin: 1.75rem 0;
-    float: inline-end;
+    display: block;
+    margin: 1rem 0.25rem;
+}
+
+.service-content a::after {
+    content: ">";
+    font-size: 1.5rem;
+    padding-left: 10px; 
+    display: inline-block;
 }
 
 .cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 256px;
+    height: 100%;
     margin-right: 2rem;
     margin-left: 2rem;
 }
@@ -402,13 +452,16 @@ ul li {
 }
 
 .card-links {
-    position: absolute;
-    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 70px;
+    height: 100%;
     border-top: 2px solid #EFEFEF;   
 }
 
 .service-content ul {
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -431,7 +484,6 @@ ul li {
     height: 32rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
-    position: relative;
 }
 
 /* --------------- FOOTER ---------------*/
